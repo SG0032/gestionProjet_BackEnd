@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.*;
 import java.util.List;
 
 @RestController
+@CrossOrigin(origins = "http://localhost:4200")
 @RequestMapping("api/categorie")
 public class categorieWs {
     @Autowired
@@ -24,7 +25,6 @@ public class categorieWs {
     @DeleteMapping("id/{id}")
     public void deleteById(@PathVariable Long id) {
         service.deleteById(id);
-
     }
 
     @DeleteMapping("/")
