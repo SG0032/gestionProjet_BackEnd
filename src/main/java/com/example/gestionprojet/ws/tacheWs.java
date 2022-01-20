@@ -25,7 +25,6 @@ public class tacheWs {
     @DeleteMapping("id/{id}")
     public void deleteById(@PathVariable Long id) {
         service.deleteById(id);
-
     }
 
     @DeleteMapping("/")
